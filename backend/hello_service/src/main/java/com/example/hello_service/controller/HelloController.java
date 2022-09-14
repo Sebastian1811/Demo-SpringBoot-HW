@@ -7,6 +7,7 @@ import com.example.hello_service.entity.HelloEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -14,16 +15,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @RestController
+@RequestMapping("/saludar")
 public class HelloController {
 
     private HelloEntity Agente = new HelloEntity();
 
-    @GetMapping("/saludar")
+    @GetMapping()
     public String saludar() {
         return  this.Agente.get_Saludo();
     }
     
-    @PostMapping("/saludar")
+    @PostMapping()
     @ResponseBody
     public HttpStatus postMethodName(@RequestParam(defaultValue = "Hola!")  String Saludo) {
         this.Agente.set_Saludo(Saludo);
