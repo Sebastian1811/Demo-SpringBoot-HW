@@ -41,6 +41,15 @@ header {
   position: relative;
 }
 
+.img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .card.reverse {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
