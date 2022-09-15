@@ -6,7 +6,7 @@ import ChatForm from './components/ChatForm'
 import Header from './components/Header'
 
 function App() {
-  const [chat, setChat] = useState(ChatData)
+  const [chat, setChat] = useState('') //ChatData
 
   const addChat = (newChat) => {
     newChat.id = uuidv4()
@@ -17,9 +17,10 @@ function App() {
     <>
     <Header/>
     <div className='container'>
-      <ChatForm handleAdd={addChat} />
+      <ChatForm handleAdd={addChat} msgrole={'hola'} />
+      <ChatForm handleAdd={addChat} msgrole={'adios'} />
       <ChatList chat = {chat} />
-
+      
     </div>
     </>
   )

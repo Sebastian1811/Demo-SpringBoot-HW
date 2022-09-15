@@ -6,9 +6,8 @@ function ChatItem({item}) {
     const [text, setText] = useState("This is an example of a feedback item")
 
   return (
-    <Card>
+    <Card role={item.role}>
         <div className='text-display'> {item.text} </div>
-        
     </Card>
   )
 }

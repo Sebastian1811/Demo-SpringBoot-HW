@@ -5,7 +5,7 @@ import ChatItem from './ChatItem'
 
 function ChatList({chat}) {
     if(!chat || chat.length === 0){
-        return <p> No ha iniciado el chat </p>
+        return <p> Aún no ha iniciado el chat </p>
     }
 
     return (
@@ -19,7 +19,8 @@ function ChatList({chat}) {
               exit = {{opacity: 0}}>
                   <ChatItem 
                   key={item.id} 
-                  item = {item} />
+                  item = {item}
+                  role = {item.role} />
               </motion.div>
           ))}
         </AnimatePresence>
@@ -34,6 +35,7 @@ ChatList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
+      role: PropTypes.string,
       //source: PropTypes.string.isRequired,
     })
   )
