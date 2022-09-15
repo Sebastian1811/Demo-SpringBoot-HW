@@ -2,10 +2,10 @@ import { useState } from "react"
 import Card from "./shared/Card"
 import Button from "./shared/Button"
 
-function ChatForm({handleAdd}) {
-    const [text, setText] = useState('¿Hola?')
+function ChatAdios({handleAdd}) {
+    const [text, setText] = useState('Adiós.')
     const [message, setMessage] = useState('')
-    const role = 'hola'
+    const role = 'adios'
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -25,4 +25,4 @@ function ChatForm({handleAdd}) {
   )
 }
 
-export default ChatForm
+export default ChatAdios

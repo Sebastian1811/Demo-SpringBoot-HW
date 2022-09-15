@@ -49,15 +49,6 @@ header {
   text-align: left;
 }
 
-.img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .centered {
   margin-left: auto;
   margin-right: auto;

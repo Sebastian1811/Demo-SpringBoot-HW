@@ -4,6 +4,7 @@ import ChatList from './components/ChatList'
 import ChatData from './components/shared/ChatData'
 import ChatForm from './components/ChatForm'
 import Header from './components/Header'
+import ChatAdios from './components/ChatAdios'
 
 function App() {
   const [chat, setChat] = useState('') //ChatData
@@ -17,8 +18,8 @@ function App() {
     <>
     <Header/>
     <div className='container'>
-      <ChatForm handleAdd={addChat} msgrole={'hola'} />
-      <ChatForm handleAdd={addChat} msgrole={'adios'} />
+      <ChatForm handleAdd={addChat}/>
+      <ChatAdios handleAdd={addChat}/>
       <ChatList chat = {chat} />
       
     </div>
