@@ -7,6 +7,11 @@ function ChatAdios({handleAdd}) {
     const [message, setMessage] = useState('')
     const role = 'adios'
 
+    const handleTextChange  = (e) => {
+      setMessage('')
+    setText(e.target.value)
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
         const newChat = {
@@ -17,11 +22,16 @@ function ChatAdios({handleAdd}) {
     }
 
   return (
-    <div className="centered" >
-        <form onSubmit={handleSubmit}>
-        <Button type="submit" version='secondary'>{text}</Button>
-        </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <div className="input-group">
+        <input onChange={handleTextChange} 
+        type="text" 
+        placeholder = "¿Hola?"
+        value = {text}
+        />
+        <Button type="submit" >Enviar</Button>
+      </div>
+    </form>
   )
 }
 
