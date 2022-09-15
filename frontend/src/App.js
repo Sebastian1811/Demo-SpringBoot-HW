@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import {v4 as uuidv4} from 'uuid'
-import ChatItem from './components/ChatItem'
 import ChatList from './components/ChatList'
 import ChatData from './components/shared/ChatData'
+import ChatForm from './components/ChatForm'
 import Header from './components/Header'
 
 function App() {
@@ -17,7 +17,9 @@ function App() {
     <>
     <Header/>
     <div className='container'>
+      <ChatForm handleAdd={addChat} />
       <ChatList chat = {chat} />
+
     </div>
     </>
   )

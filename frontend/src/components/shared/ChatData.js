@@ -1,11 +1,11 @@
 const ChatData = [
   {
     id: '1',
-    text: 'Hola',
+    text: 'Adiós',
   },
   {
     id: '2',
-    text: 'Adios',
+    text: '¿Hola?',
   },
   ]
 
