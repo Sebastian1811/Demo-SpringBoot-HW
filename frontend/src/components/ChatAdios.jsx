@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Card from "./shared/Card"
 import Button from "./shared/Button"
 
 function ChatAdios({handleAdd}) {
@@ -12,17 +11,8 @@ function ChatAdios({handleAdd}) {
     setText(e.target.value)
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const newChat = {
-            text,
-            role,
-        }
-        handleAdd(newChat)
-    }
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleTextChange} className='centered'>
       <div className="input-group">
         <input onChange={handleTextChange} 
         type="text" 

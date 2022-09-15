@@ -6,6 +6,8 @@ import ChatForm from './components/ChatForm'
 import Header from './components/Header'
 import ChatAdios from './components/ChatAdios'
 import Card from './components/shared/Card'
+import Button from './components/shared/Button'
+import BtnSubmit from './components/BtnSubmit'
 
 
 function App() {
@@ -21,10 +23,13 @@ function App() {
     <Header/>
     <div className='container'>
       <Card>
-        <ChatForm handleAdd={addChat}/>
-        <ChatAdios handleAdd={addChat}/>
+        <ChatForm />
+        <ChatAdios />
+        <div className='btn-send'> 
+          <BtnSubmit handleAdd={addChat}/>
+        </div>
       </Card>
-      
+
       <ChatList chat = {chat} />
       
     </div>
