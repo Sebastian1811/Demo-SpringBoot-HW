@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 
@@ -19,12 +19,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
 
     private HelloEntity Agente = new HelloEntity();
-
+    @CrossOrigin(origins = "*")
     @GetMapping()
     public String saludar() {
         return  this.Agente.get_Saludo();
     }
     
+    @CrossOrigin(origins = "*")
     @PostMapping()
     @ResponseBody
     public HttpStatus postMethodName(@RequestParam(defaultValue = "Hola!")  String Saludo) {
